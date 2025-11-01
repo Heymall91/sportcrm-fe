@@ -8,7 +8,7 @@ export default function Landing(){
                 <Typography variant="h4" sx={{ marginBottom: 4 }}>Welcome to SportCRM</Typography>
                 <Link to={'/auth/sign-in'}>
                     <Button variant="contained" sx={{ color: 'white' }}>
-                        Login
+                        Log in
                     </Button>     
                 </Link>
             </Box>
