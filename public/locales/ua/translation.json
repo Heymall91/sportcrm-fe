@@ -1,0 +1,115 @@
+{
+  "greeting": "Ласкаво просимо до SportCRM!",
+  "registration": {
+    "title": "Реєстрація Організації",
+    "steps": {
+      "general": {
+        "title": "Загальна Інформація",
+        "fields": {
+          "firstName": "Ім'я",
+          "lastName": "Прізвище",
+          "phoneNumber": "Номер Телефону"
+        }
+      },
+      "organization": {
+        "title": "Інформація про Організацію",
+        "fields": {
+          "organizationName": "Назва Організації"
+        }
+      },
+      "credentials": {
+        "title": "Облікові Дані",
+        "fields": {
+          "email": "Електронна Пошта",
+          "password": "Пароль",
+          "confirmPassword": "Повторіть Пароль"
+        }
+      }
+    }
+  },
+  "sign-up":{
+    "title": "Увійти"
+  },
+  "login": {
+    "title": "Логін сторінка",
+    "fields": {
+      "email": "Електронна Пошта",
+      "password": "Пароль"
+    },
+    "askCreateAcc": "Не маєте облікового запису?",
+    "createAcc": "Створити",
+    "haveAcc": "Вже маєте обліковий запис?"
+  },
+  "buttons": {
+    "next": "Далі",
+    "back": "Назад",
+    "submit": "Надіслати"
+  },
+  "validation": {
+    "registration": {
+      "firstName": {
+        "min": "Ім'я повинно бути не менше 2 символів",
+        "max": "Ім'я повинно бути не більше 50 символів"
+      },
+      "lastName": {
+        "min": "Прізвище повинно бути не менше 2 символів",
+        "max": "Прізвище повинно бути не більше 50 символів"
+      },
+      "phoneNumber": "Повинен бути дійсний український номер",
+      "organizationName": {
+        "invalid": "Ім'я вже зареєстроване",
+        "min": "Ім'я повинно бути не менше 2 символів",
+        "max": "Ім'я повинно бути не більше 50 символів"
+      },
+      "email": "Повинна бути дійсна електронна пошта",
+      "password": {
+        "min": "Пароль повинен бути не менше 6 символів"
+      },
+      "confirmPassword": "Паролі не співпадають"
+    }
+  },
+  "links": {
+    "dashboard": "Панель управління",
+    "statistics": "Статистика",
+    "goals": "Цілі",
+    "students": "Студенти",
+    "onboarding": "Почати",
+    "registration": "Реєстрація",
+    "sessions": "Сесії",
+    "login": "Увійти"
+  },
+  "errors": {
+    "somethingWentWrong": "Щось пішло не так"
+  },
+  "landing": {
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  },
+  "onboarding": {
+    "title": "Почати"
+  },
+  "search": "Пошук",
+  "students": {
+    "contacts": {
+      "title": "Контакти",
+      "phone": "Телефон",
+      "email": "Пошта"
+    },
+    "bio": {
+      "title": "Біографія",
+      "age": "{{count}} рік",
+      "age_few": "{{count}} роки",
+      "age_many": "{{count}} років",
+      "height": "Ріст",
+      "weight": "Вага",
+      "sex": "Стать"
+    }
+  },
+  "sessions": {
+    "clubId": "Клуб Id",
+    "createdAt": "Створено",
+    "duration": {
+      "title": "Тривалість",
+      "time": "хвилин"
+    }
+  }
+}
