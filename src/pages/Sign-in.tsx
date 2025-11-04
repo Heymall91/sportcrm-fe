@@ -1,6 +1,7 @@
 import { Box, Typography, TextField, Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { ROUTES } from "../routes";
 
 export default function SignIn() {
     const { t } = useTranslation();
@@ -12,7 +13,7 @@ export default function SignIn() {
                 <TextField placeholder={t('login.fields.email')} size="small"/>
                 <TextField placeholder={t('login.fields.password')} size="small"/>
                 <Button variant="contained" sx={{ color: 'white' }}>{t('links.login')}</Button>
-                <Typography paragraph sx={{ marginBottom: 0 }}>{t('login.askCreateAcc')} <Link to={'/auth/sign-up'}> {t('login.createAcc')}</Link></Typography>
+                <Typography paragraph sx={{ marginBottom: 0 }}>{t('login.askCreateAcc')} <Link to={ROUTES.PUBLIC.SIGN_UP}> {t('login.createAcc')}</Link></Typography>
             </Box>
         </>
     )

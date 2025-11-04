@@ -4,8 +4,9 @@ import type { RootState } from '../store';
 import type { IUserRes } from '../types/user';
 
 export const usersApi = createApi({
+    reducerPath: 'usersApi',
     baseQuery: fetchBaseQuery({
-        baseUrl: configApi.apiBaseUrl || '/api',
+        baseUrl: configApi.apiBaseUrl,
         credentials: 'include',
         prepareHeaders: (headers, {getState}) => {
             const token = (getState() as RootState).auth.token;
@@ -19,17 +20,29 @@ export const usersApi = createApi({
 
     endpoints: (builder) => ({
         getUsers: builder.query<IUserRes[], void>({
-            query: () => ({
-                url: '/users',
-                method: 'GET'
-            })
+            query: () => '/users'
         }),
-
+        getUserById: builder.query<IUserRes, string>({
+            query: (id) => `/users/${id}`
+        }),
         createUser: builder.mutation({
             query: (user) => ({
                 url: '/users',
                 method: 'POST',
                 body: user
+            })
+        }),
+        updateUser: builder.mutation({
+            query: ({id, body}) => ({
+                url: `/users/${id}`,
+                method: 'PATCH',
+                body
+            })
+        }),
+        deleteUser: builder.mutation({
+            query: (id) => ({
+                url: `/users/${id}`,
+                method: 'DELETE'
             })
         })
     })
