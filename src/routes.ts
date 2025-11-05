@@ -1,10 +1,13 @@
 export const ROUTES = {
     PUBLIC: {
         ROOT: '/',
-        SIGN_IN: '/sign-in',
-        SIGN_UP: '/sign-up',
+        AUTH: '/auth',
+        SIGN_IN: '/auth/sign-in',
+        SIGN_UP: '/auth/sign-up',
     },
     PRIVATE: {
-        DASHBOARD: '/dashboard',
+        ADMIN: {
+            DASHBOARD: '/dashboard',
+        }
     }
 } as const;

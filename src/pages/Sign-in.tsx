@@ -1,20 +1,18 @@
-import { Box, Typography, TextField, Button } from "@mui/material";
+import { Typography, TextField, Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import AuthBox from "../components/AuthBox";
 import { ROUTES } from "../routes";
 
 export default function SignIn() {
     const { t } = useTranslation();
 
     return (
-        <>
-            <Box component="section" sx={{ display: 'flex', flexDirection: 'column', gap: '20px', p: 4, border: '1px solid grey', borderRadius: 4, minWidth: '262px'}}>
-                <Typography variant="h4" component="h2" sx={{fontWeight: 600}}>{t('login.title')}</Typography>
-                <TextField placeholder={t('login.fields.email')} size="small"/>
-                <TextField placeholder={t('login.fields.password')} size="small"/>
-                <Button variant="contained" sx={{ color: 'white' }}>{t('links.login')}</Button>
-                <Typography paragraph sx={{ marginBottom: 0 }}>{t('login.askCreateAcc')} <Link to={ROUTES.PUBLIC.SIGN_UP}> {t('login.createAcc')}</Link></Typography>
-            </Box>
-        </>
+        <AuthBox title={t('login.title')}>
+            <TextField placeholder={t('login.fields.email')} size="small" fullWidth />
+            <TextField placeholder={t('login.fields.password')} size="small" fullWidth />
+            <Button variant="contained" sx={{ color: 'white' }} fullWidth>{t('links.login')}</Button>
+            <Typography paragraph sx={{ marginBottom: 0, textAlign: 'center' }}>{t('login.askCreateAcc')} <Link to={ROUTES.PUBLIC.SIGN_UP}> {t('login.createAcc')}</Link></Typography>
+        </AuthBox>
     )
 }

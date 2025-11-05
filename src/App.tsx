@@ -6,6 +6,7 @@ import SignUp from './pages/Sign-up'
 import Landing from './pages/Landing'
 import PublicLayout from './layouts/PublicLayout'
 import PrivateLayout from  './layouts/PrivateLayout'
+import { ROUTES } from './routes'
 
 function App() {
 
@@ -13,15 +14,15 @@ function App() {
     <>
       <Routes>
           <Route element={ <PublicLayout/> }>
-            <Route path='/' element={<Landing/>}/>
+            <Route path={ROUTES.PUBLIC.ROOT} element={<Landing/>}/>
             
-            <Route path='/auth' element={<Auth/>}>
-              <Route path='sign-in' element={<SignIn/>}/>
-              <Route path='sign-up' element={<SignUp/>}/>
+            <Route path={ROUTES.PUBLIC.AUTH} element={<Auth/>}>
+              <Route path={ROUTES.PUBLIC.SIGN_IN} element={<SignIn/>}/>
+              <Route path={ROUTES.PUBLIC.SIGN_UP} element={<SignUp/>}/>
             </Route>
         </Route>
         <Route element={<PrivateLayout/>}>
-            <Route path='/dashboard'></Route>
+            <Route path={ROUTES.PRIVATE.ADMIN.DASHBOARD}></Route>
         </Route>
 
       </Routes>

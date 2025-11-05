@@ -10,7 +10,7 @@ export default function Landing(){
         <>
             <Box component="section" sx={{ p: 4, border: '1px solid grey', borderRadius: 4}}>
                 <Typography variant="h4" sx={{ marginBottom: 4 }}>{t('greeting')}</Typography>
-                <Link to={ROUTES.PUBLIC.SIGN_UP} style={{ textDecoration: 'none', marginRight: '16px' }}>
+                <Link to={ROUTES.PUBLIC.SIGN_IN} style={{ textDecoration: 'none', marginRight: '16px' }}>
                     <Button variant="contained" sx={{ color: 'white' }}>
                         {t('links.login')}
                     </Button>     
