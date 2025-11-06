@@ -6,8 +6,6 @@ export const ROUTES = {
         SIGN_UP: '/auth/sign-up',
     },
     PRIVATE: {
-        ADMIN: {
-            DASHBOARD: '/dashboard',
-        }
+        DASHBOARD: '/dashboard',
     }
 } as const;

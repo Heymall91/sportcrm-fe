@@ -22,10 +22,12 @@ export const authSlice = createSlice({
     reducers: {
         setTokenAuth: (state, action: PayloadAction<string>) => {
             state.token = action.payload;
+            state.isAuthenticated = true;
             localStorage.setItem('token', action.payload)
         },
         logout: (state) => {
             state.token = null;
+            state.isAuthenticated = false; 
             localStorage.removeItem("token");
         }
     }

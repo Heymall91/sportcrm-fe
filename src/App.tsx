@@ -6,6 +6,7 @@ import SignUp from './pages/Sign-up'
 import Landing from './pages/Landing'
 import PublicLayout from './layouts/PublicLayout'
 import PrivateLayout from  './layouts/PrivateLayout'
+import Dashboard from './pages/Dashboard'
 import { ROUTES } from './routes'
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
             </Route>
         </Route>
         <Route element={<PrivateLayout/>}>
-            <Route path={ROUTES.PRIVATE.ADMIN.DASHBOARD}></Route>
+            <Route path={ROUTES.PRIVATE.DASHBOARD} element={<Dashboard/>}></Route>
         </Route>
 
       </Routes>
