@@ -3,8 +3,10 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Box, Button, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Toolbar, Typography } from "@mui/material";
 import { useAppDispatch, useAppSelector} from "../redux-app/hooks.ts";
-import { logout } from "../redux-app/auth/authSlice.ts";
+// import { logout } from "../redux-app/auth/authSlice.ts";
 import { menuItems } from "../constants/menuItems.ts";
+import { useAuth0 } from "@auth0/auth0-react";
+
 
 import MenuIcon from '@mui/icons-material/Menu';
 
@@ -14,6 +16,7 @@ export default function LeftSideBar(){
     const dispatch = useAppDispatch();
     const authData = useAppSelector(state => state.auth);
     const {t} = useTranslation();
+    const { logout, user } = useAuth0();
 
     const drawerClose = () => {
         setIsClose(true);
@@ -29,7 +32,9 @@ export default function LeftSideBar(){
     }
 
     const handleLogout = () => {
-        dispatch(logout())
+        logout({
+            logoutParams: {returnTo: window.location.origin}
+        })
     }
 
     const drawer = (
@@ -68,7 +73,7 @@ export default function LeftSideBar(){
                 }}
             >
                 {drawer}
-                <Button variant="contained" onClick={handleLogout} sx={{ width: '50%', alignSelf: 'center'}}>
+                <Button variant="contained" onClick={() => handleLogout()} sx={{ width: '50%', alignSelf: 'center'}}>
                     {t('logout')}
                 </Button>
             </Drawer>
