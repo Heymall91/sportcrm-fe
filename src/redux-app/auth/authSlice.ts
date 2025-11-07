@@ -25,7 +25,13 @@ export const authSlice = createSlice({
             state.isAuthenticated = true;
             localStorage.setItem('token', action.payload)
         },
+        clearToken: (state) => {
+            state.token = null;
+            state.isAuthenticated = false;
+            localStorage.removeItem("token");
+        },
         logout: (state) => {
+            console.log('Logout action triggered');
             state.token = null;
             state.isAuthenticated = false; 
             localStorage.removeItem("token");
@@ -33,4 +39,4 @@ export const authSlice = createSlice({
     }
 })
 
-export const {setTokenAuth, logout} = authSlice.actions;
+export const {setTokenAuth, clearToken, logout} = authSlice.actions;

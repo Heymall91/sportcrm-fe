@@ -10,17 +10,17 @@ import { Auth0Provider } from "@auth0/auth0-react";
 import {theme} from "./themes/themes.ts";
 import {ThemeProvider} from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
-import { ROUTES } from "./routes.ts";
+import { configAuth0 } from "./configs/configAuth0.ts";
 
 createRoot(document.getElementById('root')!).render(
       <BrowserRouter>
       <ThemeProvider theme={theme}>
         <CssBaseline/>
           <Auth0Provider 
-            domain={import.meta.env.VITE_AUTH0_DOMAIN!} 
-            clientId={import.meta.env.VITE_AUTH0_CLIENT_ID!} 
+            domain={configAuth0.domain!} 
+            clientId={configAuth0.clientId!} 
             authorizationParams={{
-              redirect_uri: `${window.location.origin}${ROUTES.PRIVATE.DASHBOARD}`,
+              redirect_uri: configAuth0.redirectUri
             }}
             cacheLocation="localstorage">
             <Provider store={store}>

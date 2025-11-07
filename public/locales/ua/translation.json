@@ -111,5 +111,16 @@
       "title": "Тривалість",
       "time": "хвилин"
     }
+  },
+  "leftSideBar": {
+    "dashboard": "Календар",
+    "previousEvent": "Минулі тренування",
+    "lessons": "Заняття",
+    "students": "Учні",
+    "statistics": "Статистика",
+    "payments": "Платежі",
+    "clubs": "Клуби",
+    "locations": "Локації",
+    "logout": "Вийти"
   }
 }

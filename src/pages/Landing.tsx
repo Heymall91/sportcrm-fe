@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Box, Typography, Button } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { ROUTES } from "../routes";
-import {useAuth0} from "@auth0/auth0-react";
+import { useAuth0 } from "@auth0/auth0-react";
 
 export default function Landing(){
     const { t } = useTranslation();

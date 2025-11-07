@@ -1,4 +1,4 @@
-import { configApi } from "../../configApi";
+import { configApi } from "../../configs/configApi";
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import type { RootState } from "../store";
 import type { IClubRes } from "../types/club";

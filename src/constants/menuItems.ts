@@ -8,12 +8,12 @@ import PersonIcon from '@mui/icons-material/Person';
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 export const menuItems = [
-    {text: "Dashboard", icon: DashboardIcon},
-    {text: "Previous Event", icon: FlagIcon},
-    {text: "Lessons", icon: AppRegistrationIcon},
-    {text: "Students", icon: PersonIcon},
-    {text: "Statistics", icon: BarChartIcon},
-    {text: "Payments", icon: PaymentIcon},
-    {text: "Clubs", icon: InventoryIcon},
-    {text: "Locations", icon: LocationOnIcon},
+    {text: 'leftSideBar.dashboard', link: "dashboard",  icon: DashboardIcon},
+    {text: 'leftSideBar.previousEvent', link: "previous Event", icon: FlagIcon},
+    {text: 'leftSideBar.lessons', link: "lessons", icon: AppRegistrationIcon},
+    {text: 'leftSideBar.students', link: "students", icon: PersonIcon},
+    {text: 'leftSideBar.statistics', link: "statistics", icon: BarChartIcon},
+    {text: 'leftSideBar.payments', link: "payments", icon: PaymentIcon},
+    {text: 'leftSideBar.clubs', link: "clubs", icon: InventoryIcon},
+    {text: 'leftSideBar.locations', link: "locations", icon: LocationOnIcon},
 ];

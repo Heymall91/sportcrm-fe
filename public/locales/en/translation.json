@@ -110,5 +110,16 @@
       "title": "Duration",
       "time": "minutes"
     }
+  },
+  "leftSideBar": {
+    "dashboard": "Dashboard",
+    "previousEvent": "Previous Event",
+    "lessons": "Lessons",
+    "students": "Students",
+    "statistics": "Statistics",
+    "payments": "Payments",
+    "clubs": "Clubs",
+    "locations": "Locations",
+    "logout": "Logout"
   }
 }
