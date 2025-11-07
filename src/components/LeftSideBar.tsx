@@ -6,6 +6,7 @@ import { menuItems } from "../constants/menuItems.ts";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useNavigate } from "react-router-dom";
 
+
 import MenuIcon from '@mui/icons-material/Menu';
 
 export default function LeftSideBar(){
@@ -14,7 +15,6 @@ export default function LeftSideBar(){
     const {t} = useTranslation();
     const { logout, user } = useAuth0();
     const navigate = useNavigate();
-
     const drawerClose = () => {
         setIsClose(true);
         setMobileOpened(false)
@@ -32,8 +32,8 @@ export default function LeftSideBar(){
         logout({
             logoutParams: {returnTo: window.location.origin}
         });
-        navigate('/');
-    }
+        navigate('/')
+    };
 
     const drawer = (
         <Box>
