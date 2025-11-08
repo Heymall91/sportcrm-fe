@@ -47,3 +47,5 @@ export const usersApi = createApi({
         })
     })
 })
+
+export const { useCreateUserMutation, useGetUsersQuery } = usersApi;

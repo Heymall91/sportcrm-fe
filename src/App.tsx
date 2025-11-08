@@ -7,6 +7,7 @@ import Landing from './pages/Landing'
 import PublicLayout from './layouts/PublicLayout'
 import PrivateLayout from  './layouts/PrivateLayout'
 import Dashboard from './pages/Dashboard'
+import Callback from './pages/Callback'
 import { ROUTES } from './routes'
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path={ROUTES.PUBLIC.AUTH} element={<Auth/>}>
               <Route path={ROUTES.PUBLIC.SIGN_IN} element={<SignIn/>}/>
               <Route path={ROUTES.PUBLIC.SIGN_UP} element={<SignUp/>}/>
+              <Route path={ROUTES.PUBLIC.CALLBACK} element={<Callback/>}/>
             </Route>
         </Route>
         <Route element={<PrivateLayout/>}>
