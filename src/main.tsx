@@ -16,11 +16,12 @@ createRoot(document.getElementById('root')!).render(
       <BrowserRouter>
       <ThemeProvider theme={theme}>
         <CssBaseline/>
-          <Auth0Provider 
+          <Auth0Provider
             domain={configAuth0.domain!} 
             clientId={configAuth0.clientId!} 
             authorizationParams={{
-              redirect_uri: configAuth0.redirectUri
+              redirect_uri: configAuth0.redirectUri,
+              audience: configAuth0.audience
             }}
             cacheLocation="localstorage">
             <Provider store={store}>

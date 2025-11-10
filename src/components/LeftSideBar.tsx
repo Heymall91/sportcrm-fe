@@ -31,7 +31,7 @@ export default function LeftSideBar(){
     const handleLogout = () => {
         logout({
             logoutParams: {returnTo: window.location.origin}
-        });
+        })
         navigate('/')
     };
 
@@ -58,6 +58,9 @@ export default function LeftSideBar(){
                     </Link>
                 ))}
             </List>
+            <Button variant="contained" onClick={() => handleLogout()} sx={{ width: '80%'}}>
+                {t('leftSideBar.logout')}
+            </Button>
         </Box>
     )
 
@@ -68,13 +71,10 @@ export default function LeftSideBar(){
                 onClose={drawerToggle(false)}
                 variant={mobileOpened ? "temporary" : "permanent"}
                 sx={{
-                    minWidth: 250,
+                    minWidth: 250
                 }}
             >
                 {drawer}
-                <Button variant="contained" onClick={() => handleLogout()} sx={{ width: '50%', alignSelf: 'center'}}>
-                    {t('leftSideBar.logout')}
-                </Button>
             </Drawer>
 
             {mobileOpened && !open && (

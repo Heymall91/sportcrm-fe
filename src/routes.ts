@@ -4,9 +4,16 @@ export const ROUTES = {
         AUTH: '/auth',
         SIGN_IN: '/auth/sign-in',
         SIGN_UP: '/auth/sign-up',
-        CALLBACK: '/callback',
+        CALLBACK: '/auth/callback',
     },
     PRIVATE: {
         DASHBOARD: '/dashboard',
+        PREVIOUS_EVENTS: "/previous-events",
+        SESSIONS: "/sessions",
+        STUDENTS: "/students",
+        STATISTICS: "/statistics",
+        PAYMENTS: "/payments",
+        CLUBS: "/clubs",
+        LOCATIONS: "/locations"
     }
 } as const;
