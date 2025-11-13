@@ -121,6 +121,15 @@
     "payments": "Платежі",
     "clubs": "Клуби",
     "locations": "Локації",
+    "settings": "Налаштування",
     "logout": "Вийти"
+  },
+  "settings":{
+    "changeLang": "Змінити мову",
+    "lngEn": "English",
+    "lngUa": "Українська",
+    "themeChange": "Змінити тему",
+    "dark": "Темна",
+    "light": "Світла"
   }
 }

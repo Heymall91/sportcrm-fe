@@ -120,6 +120,15 @@
     "payments": "Payments",
     "clubs": "Clubs",
     "locations": "Locations",
+    "settings": "Settings",
     "logout": "Logout"
+  },
+  "settings":{
+    "changeLang": "Change Language",
+    "lngEn": "English",
+    "lngUa": "Українська",
+    "themeChange": "Change theme",
+    "dark": "Dark",
+    "light": "Light"
   }
 }

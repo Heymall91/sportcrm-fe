@@ -9,11 +9,12 @@ export const ROUTES = {
     PRIVATE: {
         DASHBOARD: '/dashboard',
         PREVIOUS_EVENTS: "/previous-events",
-        SESSIONS: "/sessions",
+        LESSONS: "/lessons",
         STUDENTS: "/students",
         STATISTICS: "/statistics",
         PAYMENTS: "/payments",
         CLUBS: "/clubs",
-        LOCATIONS: "/locations"
+        LOCATIONS: "/locations",
+        SETTINGS: "/settings"
     }
 } as const;

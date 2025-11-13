@@ -1,4 +1,5 @@
 import { configApi } from "../../configs/configApi";
+import { config } from '../../configs/config';
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import type { RootState } from "../store";
 import type { IClubRes } from "../types/club";
@@ -6,7 +7,7 @@ import type { IClubRes } from "../types/club";
 export const clubApi = createApi({
     reducerPath: 'clubApi',
     baseQuery: fetchBaseQuery({
-        baseUrl: configApi.apiBaseUrl,
+        baseUrl: config.configApi.apiBaseUrl,
         credentials: 'include',
         prepareHeaders: (headers, {getState}) => {
             const token = (getState() as RootState).auth.token;

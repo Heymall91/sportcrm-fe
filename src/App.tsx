@@ -7,7 +7,15 @@ import Landing from './pages/Landing'
 import PublicLayout from './layouts/PublicLayout'
 import PrivateLayout from  './layouts/PrivateLayout'
 import Dashboard from './pages/Dashboard'
+import Previous from './pages/Previous'
 import Callback from './pages/Callback'
+import Lessons from './pages/Lessons'
+import Students from './pages/Students'
+import Statistics from './pages/Statistics'
+import Payments from './pages/Payments'
+import Clubs from './pages/Clubs'
+import Locations from './pages/Locations'
+import Settings from './pages/Settings'
 import { ROUTES } from './routes'
 
 function App() {
@@ -26,6 +34,14 @@ function App() {
         </Route>
         <Route element={<PrivateLayout/>}>
             <Route path={ROUTES.PRIVATE.DASHBOARD} element={<Dashboard/>}></Route>
+            <Route path={ROUTES.PRIVATE.PREVIOUS_EVENTS} element={<Previous/>}></Route>
+            <Route path={ROUTES.PRIVATE.LESSONS} element={<Lessons/>}></Route>
+            <Route path={ROUTES.PRIVATE.STUDENTS} element={<Students/>}></Route>
+            <Route path={ROUTES.PRIVATE.STATISTICS} element={<Statistics/>}></Route>
+            <Route path={ROUTES.PRIVATE.PAYMENTS} element={<Payments/>}></Route>
+            <Route path={ROUTES.PRIVATE.CLUBS} element={<Clubs/>}></Route>
+            <Route path={ROUTES.PRIVATE.LOCATIONS} element={<Locations/>}></Route>
+            <Route path={ROUTES.PRIVATE.SETTINGS} element={<Settings/>}></Route>
         </Route>
 
       </Routes>

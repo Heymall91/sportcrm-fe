@@ -9,7 +9,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 export const menuItems = [
     {text: 'leftSideBar.dashboard', link: "dashboard",  icon: DashboardIcon},
-    {text: 'leftSideBar.previousEvent', link: "previous Event", icon: FlagIcon},
+    {text: 'leftSideBar.previousEvent', link: "previous-events", icon: FlagIcon},
     {text: 'leftSideBar.lessons', link: "lessons", icon: AppRegistrationIcon},
     {text: 'leftSideBar.students', link: "students", icon: PersonIcon},
     {text: 'leftSideBar.statistics', link: "statistics", icon: BarChartIcon},

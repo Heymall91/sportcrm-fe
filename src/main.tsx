@@ -7,27 +7,26 @@ import { Provider } from "react-redux";
 import { store } from "./redux-app/store.ts";
 import { Auth0Provider } from "@auth0/auth0-react";
 
-import {theme} from "./themes/themes.ts";
-import {ThemeProvider} from "@mui/material/styles";
+import { ThemeContextProvider } from "../src/themes/themeContext.tsx";
 import { CssBaseline } from "@mui/material";
-import { configAuth0 } from "./configs/configAuth0.ts";
+import {config} from './configs/config.ts'
 
 createRoot(document.getElementById('root')!).render(
       <BrowserRouter>
-      <ThemeProvider theme={theme}>
+      <ThemeContextProvider>
         <CssBaseline/>
           <Auth0Provider
-            domain={configAuth0.domain!} 
-            clientId={configAuth0.clientId!} 
+            domain={config.configAuth0.domain!} 
+            clientId={config.configAuth0.clientId!} 
             authorizationParams={{
-              redirect_uri: configAuth0.redirectUri,
-              audience: configAuth0.audience
+              redirect_uri: config.configAuth0.redirectUri,
+              audience: config.configAuth0.audience
             }}
             cacheLocation="localstorage">
             <Provider store={store}>
               <App />
             </Provider>
           </Auth0Provider>
-      </ThemeProvider>
+      </ThemeContextProvider>
       </BrowserRouter>
 )
