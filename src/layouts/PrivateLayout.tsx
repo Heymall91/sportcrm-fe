@@ -49,9 +49,9 @@ const PrivateLayout = () => {
     }
 
     return (
-        <Box sx={{ display: 'flex' }}>
+        <Box sx={{ display: 'flex', alignItems: 'end' }}>
             <LeftSideBar/>
-            <Box component="main" sx={{ flexGrow: 1, p: 3, margin: 3 }}>
+            <Box component="main" sx={{ p: 3, margin: 3 }}>
                 <Outlet/>
             </Box>
         </Box>

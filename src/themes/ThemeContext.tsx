@@ -1,7 +1,7 @@
 import React, { createContext, useState, useMemo, useContext } from 'react';
 import type {ReactNode} from 'react';
 import type { PaletteMode } from '@mui/material';
-import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
+import { ThemeProvider, createTheme } from '@mui/material';
 
 interface ThemeContextType {
   mode: PaletteMode;
@@ -43,7 +43,6 @@ export const ThemeContextProvider: React.FC<ThemeContextProviderProps> = ({ chil
   return (
     <ThemeContext.Provider value={{ mode, toggleTheme }}>
       <ThemeProvider theme={theme}>
-        <CssBaseline />
         {children}
       </ThemeProvider>
     </ThemeContext.Provider>

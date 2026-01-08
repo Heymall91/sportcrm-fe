@@ -11,6 +11,8 @@ export const ROUTES = {
         PREVIOUS_EVENTS: "/previous-events",
         LESSONS: "/lessons",
         STUDENTS: "/students",
+        CREATE_STUDENTS: "/create-students",
+        EDIT_STUDENTS: "/edit-students/:id",
         STATISTICS: "/statistics",
         PAYMENTS: "/payments",
         CLUBS: "/clubs",
@@ -18,3 +20,7 @@ export const ROUTES = {
         SETTINGS: "/settings"
     }
 } as const;
+
+export const idRoute = {
+    editStudent: (id: string) => `/edit-students/${id}`,
+};

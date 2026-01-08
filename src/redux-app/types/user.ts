@@ -5,14 +5,10 @@ export interface User {
     auth0Id: string;
     firstName: string,
     lastName: string,
+    email: string,
     phone: string,
     birthday: Date,
     gender: Gender,
     height?: number,
     weight?: number
-}
-
-export interface IUserRes{
-    data: User,
-    message: string;
 }

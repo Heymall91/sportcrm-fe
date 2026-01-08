@@ -31,7 +31,7 @@ export default function LeftSideBar(){
     }
 
     const settings = () => {
-        window.location.href = ROUTES.PRIVATE.SETTINGS 
+        return window.location.href = ROUTES.PRIVATE.SETTINGS 
     }
 
     const handleLogout = () => {
@@ -65,10 +65,14 @@ export default function LeftSideBar(){
                 ))}
             </List>
             <Box sx={{display: "flex",  flexDirection: "column", alignItems: 'center', gap: '10px', mt: 'auto', p: 2}}>
-                <Button variant="text" onClick={() => settings()} sx={{ width: '80%', justifyContent: 'space-around'}}>
-                    <SettingsIcon/>
-                    {t("leftSideBar.settings")}
-                </Button>
+                <Box sx={{width: '80%'}}>
+                    <Link to={ROUTES.PRIVATE.SETTINGS }>
+                        <Button sx={{width: '100%', justifyContent: 'space-around'}}>
+                            <SettingsIcon/>
+                            {t("leftSideBar.settings")}
+                        </Button>
+                    </Link>
+                </Box>
                 <Button variant="contained" onClick={() => handleLogout()} sx={{ width: '80%'}}>
                     {t('leftSideBar.logout')}
                 </Button>

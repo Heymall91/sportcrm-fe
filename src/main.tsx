@@ -10,6 +10,8 @@ import { Auth0Provider } from "@auth0/auth0-react";
 import { ThemeContextProvider } from "../src/themes/themeContext.tsx";
 import { CssBaseline } from "@mui/material";
 import {config} from './configs/config.ts'
+import { unstable_createMuiStrictModeTheme } from '@mui/material/styles';
+const theme = unstable_createMuiStrictModeTheme();
 
 createRoot(document.getElementById('root')!).render(
       <BrowserRouter>

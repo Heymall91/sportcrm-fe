@@ -1,6 +1,6 @@
 export const config = {
     configApi: {
-        apiBaseUrl: import.meta.env.VITE_API_URL || '/api',
+        apiBaseUrl: import.meta.env.VITE_SERVERHOST,
     },
     configAuth0: {
         domain: import.meta.env.VITE_AUTH0_DOMAIN,

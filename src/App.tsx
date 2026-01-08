@@ -11,6 +11,8 @@ import Previous from './pages/Previous'
 import Callback from './pages/Callback'
 import Lessons from './pages/Lessons'
 import Students from './pages/Students'
+import CreateStudents from './pages/CreateStudents'
+import EditStudents from './pages/EditStudents'
 import Statistics from './pages/Statistics'
 import Payments from './pages/Payments'
 import Clubs from './pages/Clubs'
@@ -18,7 +20,28 @@ import Locations from './pages/Locations'
 import Settings from './pages/Settings'
 import { ROUTES } from './routes'
 
+import { setTokenGetter } from './redux-app/api/users-api'
+import { useAuth0 } from '@auth0/auth0-react'
+import { useEffect } from 'react'
+
 function App() {
+
+  const { getAccessTokenSilently } = useAuth0();
+
+  useEffect(() => {
+
+    setTokenGetter(async () => {
+      try{
+      const token = await getAccessTokenSilently()
+      
+      return token
+      } catch(err){
+        console.error('Ошибка при получении токена:', err);
+        throw err;
+      }
+    });
+
+  }, [getAccessTokenSilently]);
 
   return (
     <>
@@ -37,6 +60,8 @@ function App() {
             <Route path={ROUTES.PRIVATE.PREVIOUS_EVENTS} element={<Previous/>}></Route>
             <Route path={ROUTES.PRIVATE.LESSONS} element={<Lessons/>}></Route>
             <Route path={ROUTES.PRIVATE.STUDENTS} element={<Students/>}></Route>
+            <Route path={ROUTES.PRIVATE.CREATE_STUDENTS} element={<CreateStudents/>}></Route>
+            <Route path={ROUTES.PRIVATE.EDIT_STUDENTS} element={<EditStudents/>}></Route>
             <Route path={ROUTES.PRIVATE.STATISTICS} element={<Statistics/>}></Route>
             <Route path={ROUTES.PRIVATE.PAYMENTS} element={<Payments/>}></Route>
             <Route path={ROUTES.PRIVATE.CLUBS} element={<Clubs/>}></Route>

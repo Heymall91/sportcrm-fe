@@ -10,8 +10,8 @@ export default function Landing(){
     const navigate = useNavigate();
 
     const handleLogin = () => {
-        if(isAuthenticated){
-            navigate(ROUTES.PUBLIC.SIGN_IN);
+        if(!isAuthenticated){
+            navigate(ROUTES.PUBLIC.ROOT);
         }
         else{
             loginWithRedirect();
@@ -22,7 +22,7 @@ export default function Landing(){
         <>
             <Box component="section" sx={{ p: 4, border: '1px solid grey', borderRadius: 4}}>
                 <Typography variant="h4" sx={{ marginBottom: 4 }}>{t('greeting')}</Typography>
-                <Button variant="contained" onClick={() => handleLogin()} sx={{ color: 'white' }}>
+                <Button variant="contained" onClick={() => loginWithRedirect()} sx={{ color: 'white' }}>
                     {t('links.login')}
                 </Button>  
             </Box>

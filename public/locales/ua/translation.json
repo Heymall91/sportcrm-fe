@@ -43,7 +43,8 @@
   "buttons": {
     "next": "Далі",
     "back": "Назад",
-    "submit": "Надіслати"
+    "submit": "Надіслати",
+    "create": "Створити"
   },
   "validation": {
     "registration": {
@@ -93,15 +94,6 @@
       "title": "Контакти",
       "phone": "Телефон",
       "email": "Пошта"
-    },
-    "bio": {
-      "title": "Біографія",
-      "age": "{{count}} рік",
-      "age_few": "{{count}} роки",
-      "age_many": "{{count}} років",
-      "height": "Ріст",
-      "weight": "Вага",
-      "sex": "Стать"
     }
   },
   "sessions": {
@@ -131,5 +123,20 @@
     "themeChange": "Змінити тему",
     "dark": "Темна",
     "light": "Світла"
+  },
+  "addStudent": {
+    "addStudent": "Додати учня",
+    "editStudent": "Редагувати учня",
+    "name": "Ім'я",
+    "surname": "Прізвище",
+    "phone": "Телефон",
+    "email": "Електронна Пошта",
+    "birthday": "Дата народження",
+    "gender": "Стать",
+    "male": "Чоловік",
+    "female": "Жінка",
+    "height": "Ріст",
+    "weight": "Вага",
+    "age": "Вік"
   }
 }

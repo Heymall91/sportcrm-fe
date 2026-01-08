@@ -11,9 +11,7 @@ export default function Callback(){
     const navigate = useNavigate();
     const [createUser, {isLoading: creatingUser}] = useCreateUserMutation();
     const [isProcessing, setIsProcessing] = useState(true);
-
-    useEffect(() => {
-        const userCreate = async () => {
+    const userCreate = async () => {
             if(authLoading) return;
 
             if(!user || !isAuthenticated){
@@ -43,10 +41,10 @@ export default function Callback(){
             } finally{
                 setIsProcessing(false);
             }
-        };
+    };
 
+    useEffect(() => {
         userCreate();
-
     }, [user, authLoading, isAuthenticated, createUser, navigate]);
 
     const loading = authLoading || creatingUser || isProcessing;

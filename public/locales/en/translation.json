@@ -43,7 +43,8 @@
   "buttons": {
     "next": "Next",
     "back": "Back",
-    "submit": "Submit"
+    "submit": "Submit",
+    "create": "Create"
   },
   "validation": {
     "registration": {
@@ -88,21 +89,6 @@
     "title": "Onboarding"
   },
   "search": "Search",
-  "students": {
-    "contacts": {
-      "title": "Contacts",
-      "phone": "Phone",
-      "email": "Email"
-    },
-    "bio": {
-      "title": "Bio",
-      "age": "{{count}} year old",
-      "age_other": "{{count}} years old",
-      "height": "height",
-      "weight": "weight",
-      "sex": "sex"
-    }
-  },
   "sessions": {
     "clubId": "Club Id",
     "createdAt": "Created At",
@@ -123,12 +109,27 @@
     "settings": "Settings",
     "logout": "Logout"
   },
-  "settings":{
+  "settings": {
     "changeLang": "Change Language",
     "lngEn": "English",
     "lngUa": "Українська",
     "themeChange": "Change theme",
     "dark": "Dark",
     "light": "Light"
+  },
+  "addStudent": {
+    "addStudent": "Add student",
+    "editStudent": "Edit Student",
+    "name": "Name",
+    "surname": "Surname",
+    "phone": "Phone",
+    "email": "Email",
+    "birthday": "Birthday",
+    "gender": "Gender",
+    "male": "Male",
+    "female": "Female",
+    "height": "Height",
+    "weight": "Weight",
+    "age": "Age"
   }
 }
