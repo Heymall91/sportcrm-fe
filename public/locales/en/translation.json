@@ -1,0 +1,135 @@
+{
+  "greeting": "Welcome to SportCRM!",
+  "registration": {
+    "title": "Organization Onboarding",
+    "steps": {
+      "general": {
+        "title": "General Information",
+        "fields": {
+          "firstName": "First Name",
+          "lastName": "Last Name",
+          "phoneNumber": "Phone Number"
+        }
+      },
+      "organization": {
+        "title": "Organization Information",
+        "fields": {
+          "organizationName": "Organization Name"
+        }
+      },
+      "credentials": {
+        "title": "Credentials",
+        "fields": {
+          "email": "Emails",
+          "password": "Passwords",
+          "confirmPassword": "Repeat Password"
+        }
+      }
+    }
+  },
+  "sign-up":{
+    "title": "Sign Up"
+  },
+  "login": {
+    "title": "Sign in",
+    "fields": {
+      "email": "Email",
+      "password": "Password"
+    },
+    "askCreateAcc": "Haven't account yet?",
+    "createAcc": "Create account",
+    "haveAcc": "Already signed up?"
+  },
+  "buttons": {
+    "next": "Next",
+    "back": "Back",
+    "submit": "Submit",
+    "create": "Create"
+  },
+  "validation": {
+    "registration": {
+      "firstName": {
+        "min": "First Name should be at least 2 characters",
+        "max": "First Name should not be more than 50 characters"
+      },
+      "lastName": {
+        "min": "First Name should be at least 2 characters",
+        "max": "First Name should not be more than 50 characters"
+      },
+      "phoneNumber": "Must be a valid Ukrainian number",
+      "organizationName": {
+        "invalid": "Name is already registered",
+        "min": "Name should be at least 2 characters",
+        "max": "Name should not be more than 50 characters"
+      },
+      "email": "Sould be valid email",
+      "password": {
+        "min": "Password should be at least 6 characters"
+      },
+      "confirmPassword": "Passwords don't match"
+    }
+  },
+  "links": {
+    "dashboard": "Dashboard",
+    "statistics": "Statistics",
+    "goals": "Goals",
+    "students": "Students",
+    "onboarding": "Onboarding",
+    "registration": "Registration",
+    "sessions": "Sessions",
+    "login": "Login"
+  },
+  "errors": {
+    "somethingWentWrong": "Something went wrong"
+  },
+  "landing": {
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  },
+  "onboarding": {
+    "title": "Onboarding"
+  },
+  "search": "Search",
+  "sessions": {
+    "clubId": "Club Id",
+    "createdAt": "Created At",
+    "duration": {
+      "title": "Duration",
+      "time": "minutes"
+    }
+  },
+  "leftSideBar": {
+    "dashboard": "Dashboard",
+    "previousEvent": "Previous Event",
+    "lessons": "Lessons",
+    "students": "Students",
+    "statistics": "Statistics",
+    "payments": "Payments",
+    "clubs": "Clubs",
+    "locations": "Locations",
+    "settings": "Settings",
+    "logout": "Logout"
+  },
+  "settings": {
+    "changeLang": "Change Language",
+    "lngEn": "English",
+    "lngUa": "Українська",
+    "themeChange": "Change theme",
+    "dark": "Dark",
+    "light": "Light"
+  },
+  "addStudent": {
+    "addStudent": "Add student",
+    "editStudent": "Edit Student",
+    "name": "Name",
+    "surname": "Surname",
+    "phone": "Phone",
+    "email": "Email",
+    "birthday": "Birthday",
+    "gender": "Gender",
+    "male": "Male",
+    "female": "Female",
+    "height": "Height",
+    "weight": "Weight",
+    "age": "Age"
+  }
+}
